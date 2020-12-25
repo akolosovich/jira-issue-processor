@@ -1,0 +1,58 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "babel-eslint",
+  "plugins": ["json", "prettier"],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "arrow-body-style": 0,
+    "class-methods-use-this": 0,
+    "consistent-return": 0,
+    "func-names": 0,
+    "global-require": 0,
+    "import/extensions": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/prefer-default-export": 0,
+    "newline-after-var": "error",
+    "newline-before-return": "error",
+    "no-magic-numbers": [
+      "error",
+      {
+        "ignore": [-1, 0, 1]
+      }
+    ],
+    "no-console": "off",
+    "no-multi-assign": 0,
+    "no-param-reassign": 0,
+    "no-prototype-builtins": 0,
+    "no-shadow": 0,
+    "no-underscore-dangle": 0,
+    "no-useless-escape": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "bracketSpacing": true,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "printWidth": 120
+      }
+    ],
+    "require-yield": 0,
+    "spaced-comment": "off"
+  }
+}
