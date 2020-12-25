@@ -76,7 +76,7 @@ class JiraService {
           epic,
         };
       }),
-      filter(this.isTest),
+      filter(this.isNotProcessed),
     )(issues);
   }
 

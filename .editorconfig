@@ -12,3 +12,7 @@ indent_size = 2
 [config/**.js]
 indent_style = space
 indent_size = 2
+
+[handler.js]
+indent_style = space
+indent_size = 2

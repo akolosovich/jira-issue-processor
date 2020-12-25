@@ -2,15 +2,14 @@
 
 require('../config');
 
+const config = require('../config');
 const { logger } = require('./logger');
 const { issueProcessor } = require('./services');
 
-(async () => {
+exports.handler = async () => {
   try {
-    const boardId = '1';
-
-    await issueProcessor.processBoard(boardId);
+    await issueProcessor.processBoard(config.jiraBoardId);
   } catch (e) {
     logger.error(e);
   }
-})();
+};
