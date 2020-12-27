@@ -1,8 +1,8 @@
 const enumCategory = {
-  METACRITIC: 'metacritic',
+  METACRITIC_GAME: 'metacritic_game',
+  METACRITIC_MOVIE: 'metacritic_movie',
   IMDB: 'imdb',
   PROCESSED: 'processed',
-  TEST: 'test',
 };
 
 module.exports = {

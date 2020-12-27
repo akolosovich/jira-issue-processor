@@ -125,12 +125,12 @@ class JiraService {
     return this.jiraClient.addWorklog(issueId, worklog);
   }
 
+  /**
+   * @param {*} issue
+   * @returns {boolean}
+   */
   isNotProcessed(issue) {
     return issue.labels.indexOf(enumCategory.PROCESSED) === -1;
-  }
-
-  isTest(issue) {
-    return issue.labels.indexOf(enumCategory.TEST) > -1;
   }
 }
 

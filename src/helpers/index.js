@@ -28,8 +28,12 @@ const getCategoryByLink = link => {
     return null;
   }
 
-  if (link.startsWith('https://www.metacritic.com')) {
-    return enumCategory.METACRITIC;
+  if (link.startsWith('https://www.metacritic.com/title')) {
+    return enumCategory.METACRITIC_MOVIE;
+  }
+
+  if (link.startsWith('https://www.metacritic.com/game')) {
+    return enumCategory.METACRITIC_GAME;
   }
 
   if (link.startsWith('https://www.imdb.com')) {
@@ -45,9 +49,11 @@ const getCategoryByLink = link => {
  */
 const getEpicByCategory = category => {
   switch (category) {
-    case enumCategory.METACRITIC:
+    case enumCategory.METACRITIC_MOVIE:
     case enumCategory.IMDB:
       return epics.watching;
+    case enumCategory.METACRITIC_GAME:
+      return epics.playing;
     default:
       return null;
   }

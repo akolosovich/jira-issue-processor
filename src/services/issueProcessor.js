@@ -94,6 +94,9 @@ class IssueProcessor {
    * @returns {Promise<void>}
    */
   async processWorklog(issue, runtime) {
+    if (!runtime) {
+      return;
+    }
     const worklog = issue.worklogs[0];
 
     if (worklog) {

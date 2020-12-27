@@ -1,6 +1,6 @@
 const { AbstractParser } = require('./abstractParser');
 
-class MetacriticParser extends AbstractParser {
+class MetacriticMovieParser extends AbstractParser {
   /**
    * @param {String} link
    * @param {String} pageContent
@@ -30,5 +30,5 @@ class MetacriticParser extends AbstractParser {
 }
 
 module.exports = {
-  MetacriticParser,
+  MetacriticMovieParser,
 };

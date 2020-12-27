@@ -1,4 +1,5 @@
-const { MetacriticParser } = require('./metacriticParser');
+const { MetacriticMovieParser } = require('./metacriticMovieParser');
+const { MetacriticGameParser } = require('./metacriticGameParser');
 const { ImdbParser } = require('./imdbParser');
 const { enumCategory } = require('../dtos/enums');
 
@@ -18,8 +19,20 @@ class ParserFactory {
       return this.storage[type];
     }
 
-    if (type === enumCategory.METACRITIC) {
-      this.storage[type] = new MetacriticParser(type, this.cheerio, this.loggerFactory.getLogger('MetacriticParser'));
+    if (type === enumCategory.METACRITIC_MOVIE) {
+      this.storage[type] = new MetacriticMovieParser(
+        type,
+        this.cheerio,
+        this.loggerFactory.getLogger('MetacriticMovieParser'),
+      );
+    }
+
+    if (type === enumCategory.METACRITIC_GAME) {
+      this.storage[type] = new MetacriticGameParser(
+        type,
+        this.cheerio,
+        this.loggerFactory.getLogger('MetacriticGameParser'),
+      );
     }
 
     if (type === enumCategory.IMDB) {
